@@ -7,9 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
-    <Folder Include="Patients\Commands\" />
-    <Folder Include="Patients\Queries\" />
+    <Folder Include="Patients\Commands\CreatePatient\" />
+    <Folder Include="Patients\Commands\DeletePatient\" />
+    <Folder Include="Patients\Commands\UpdatePatient\" />
+    <Folder Include="Patients\Queries\GetPatientsByBirthDate\" />
   </ItemGroup>
 
   <ItemGroup>
