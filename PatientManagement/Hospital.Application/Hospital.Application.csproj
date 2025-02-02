@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Patients\Commands\CreatePatient\" />
-    <Folder Include="Patients\Commands\DeletePatient\" />
-    <Folder Include="Patients\Commands\UpdatePatient\" />
-    <Folder Include="Patients\Queries\GetPatientsByBirthDate\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />

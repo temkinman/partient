@@ -22,7 +22,7 @@ public class GetPatientByIdHandler : IRequestHandler<GetPatientByIdQuery, GetPat
 
     public async Task<GetPatientByIdResult> Handle(GetPatientByIdQuery query, CancellationToken cancellationToken)
     {
-        Patient? patient = await _patientRepository.GetItemByIdAsync(query.PatientId);
+        Patient? patient = await _patientRepository.GetItemByIdAsync(query.PatientId, cancellationToken);
 
         if (patient == null) 
         {

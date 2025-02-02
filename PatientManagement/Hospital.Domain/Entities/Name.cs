@@ -10,6 +10,17 @@ public class Name
     public string LastName { get; set; }
     public string Family { get; set; }
 
+    public Name()
+    { }
+
+    public Name(string use, string firstName, string lastName, string family)
+    {
+        Use = use;
+        FirstName = firstName;
+        LastName = lastName;
+        Family = family;
+    }
+
     [NotMapped]
     public List<string> Given
     {
