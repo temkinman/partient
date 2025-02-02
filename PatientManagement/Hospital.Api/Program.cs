@@ -18,17 +18,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers()
     .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddSwaggerGen();
-
-// настройка для Enum
-// builder.Services.Configure<JsonOptions>(options =>
-// {
-//     options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
-// });
 
 builder.Services.AddMediatR(config =>
 {
@@ -60,6 +55,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseHsts();
 
 app.MapControllers();
 
