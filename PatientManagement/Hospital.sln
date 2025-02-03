@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{9F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hospital", "Hospital", "{7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeedingInitialData", "SeedingInitialData\SeedingInitialData.csproj", "{36800D5B-6EC8-45BA-8766-8CDF85CF4C70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{FD73F7A0-921F-4136-94AC-E6E5EDDCA6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD73F7A0-921F-4136-94AC-E6E5EDDCA6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD73F7A0-921F-4136-94AC-E6E5EDDCA6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36800D5B-6EC8-45BA-8766-8CDF85CF4C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36800D5B-6EC8-45BA-8766-8CDF85CF4C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36800D5B-6EC8-45BA-8766-8CDF85CF4C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36800D5B-6EC8-45BA-8766-8CDF85CF4C70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{FD73F7A0-921F-4136-94AC-E6E5EDDCA6BB} = {7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9}
 		{9F2BDB74-8929-48FE-B3FB-B0A745A3E889} = {359CA8EE-E057-4BE3-B0E5-2DC95EBD548F}
 		{7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9} = {9F2BDB74-8929-48FE-B3FB-B0A745A3E889}
+		{36800D5B-6EC8-45BA-8766-8CDF85CF4C70} = {7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D9F992E-441A-4977-8B21-BB9BC6D0A54C}

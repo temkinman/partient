@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SeedingInitialData": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

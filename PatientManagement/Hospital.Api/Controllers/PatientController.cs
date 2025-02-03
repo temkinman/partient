@@ -174,9 +174,28 @@ public class PatientController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<ActionResult<bool>> DeleteProduct(Guid patientId)
+    public async Task<ActionResult<bool>> DeletePatient(Guid patientId)
     {
         var result = await _mediator.Send(new DeletePatientCommand(patientId));
+        
+        return Ok(result.IsSuccess);
+    }
+
+    /// <summary>
+    /// Delete all records.
+    /// </summary>
+    /// <returns>
+    /// A <see cref="ActionResult{bool}"/> indicating whether the deletion was successful.
+    /// </returns>
+    [HttpDelete]
+    [Route("patients/delete-all")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(bool))]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<ActionResult<bool>> DeleteAllPatients()
+    {
+        var result = await _mediator.Send(new DeleteAllPatientsCommand());
         
         return Ok(result.IsSuccess);
     }

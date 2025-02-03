@@ -51,6 +51,14 @@ public class PatientRepository : IPatientRepository
         return true;
     }
 
+    public async Task<bool> RemoveAllItemsAsync(CancellationToken cancellationToken = default)
+    {
+        _context.Patients.RemoveRange();
+        await _context.SaveChangesAsync(cancellationToken);
+        
+        return true;
+    }
+
     public async Task<IEnumerable<Patient>> GetPatientsByBirthDateAsync(Expression<Func<Patient, bool>> conditionExpression, CancellationToken cancellationToken)
     {
         return await _context.Patients

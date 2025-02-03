@@ -1,5 +1,3 @@
-// using System.Text.Json.Serialization;
-
 using System.Text.Json.Serialization;
 using FluentValidation;
 using Hospital.Api.Mapping;
@@ -52,13 +50,13 @@ var app = builder.Build();
 app.UseMiddleware<CustomExceptionHandlerMiddleware>();
 
 app.UseRouting();
-app.UseCors("AllowAllOrigins"); // Enable CORS
+app.UseCors("AllowAllOrigins");
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    
+
     using (var scope = app.Services.CreateScope())
     {
         var dbContext = scope.ServiceProvider
@@ -73,11 +71,6 @@ app.UseHsts();
 
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
-
-// app.MapControllers();
+app.MapControllers();
 
 app.Run();

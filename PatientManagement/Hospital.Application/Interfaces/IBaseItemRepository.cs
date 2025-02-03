@@ -9,5 +9,5 @@ public interface IBaseItemRepository<T>
     Task<T> CreateAsync(T item, CancellationToken cancellationToken = default);
     Task<T> UpdateAsync(T item, CancellationToken cancellationToken = default);
     Task<bool> DeleteAsync(T item, CancellationToken cancellationToken = default);
-    // Task<IEnumerable<T>> GetPatientsByBirthDateAsync(Expression<Func<T, bool>> conditionExpression, CancellationToken cancellationToken = default);
+    Task<bool> RemoveAllItemsAsync(CancellationToken cancellationToken = default);
 }

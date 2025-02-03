@@ -21,5 +21,15 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     container_name: db_hospital_container
+    
+  data.seeder:
+    build:
+      context: .
+      dockerfile: ./SeedingInitialData/Dockerfile
+    container_name: hospital_data_seeder
+    depends_on:
+      - patientDb
+    command: [ "dotnet", "SeedingInitialData.dll" ]
+
 volumes:
   db_data:

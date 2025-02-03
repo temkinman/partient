@@ -15,6 +15,7 @@ public class Name
 
     public Name(string use, string firstName, string lastName, string family)
     {
+        Id = Guid.NewGuid();
         Use = use;
         FirstName = firstName;
         LastName = lastName;

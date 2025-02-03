@@ -38,4 +38,12 @@ public class NameRepository : INameRepository
     {
         throw new NotImplementedException();
     }
+
+    public async Task<bool> RemoveAllItemsAsync(CancellationToken cancellationToken = default)
+    {
+        _context.PatientNames.RemoveRange(_context.PatientNames);
+        await _context.SaveChangesAsync(cancellationToken);
+        
+        return true;
+    }
 }

@@ -1,5 +1,4 @@
-﻿using System.Data;
-using FluentValidation;
+﻿using FluentValidation;
 using Hospital.Application.Dtos;
 using Hospital.Application.Enums;
 using MediatR;
@@ -21,8 +20,6 @@ public class GetPatientsByPeriodDatesQueryValidator : AbstractValidator<GetPatie
     {
         RuleFor(x => x.StartDate).NotEmpty().WithMessage("Invalid birth date");
         RuleFor(x => x.EndDate).NotEmpty().WithMessage("Invalid birth date");
-        RuleFor(x => x.StartDatePrefix).NotEqual(DateParamsPrefix.ge) .WithMessage("Invalid startDate prefix");
-        RuleFor(x => x.EndDatePrefix).NotEqual(DateParamsPrefix.le) .WithMessage("Invalid endDate prefix");
     }
 }
 

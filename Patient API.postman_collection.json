@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "a3ee0b6c-78a7-4e8b-b68e-5b1e22745f09",
+		"name": "Patient API",
+		"description": "Collection of endpoints for managing patients.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13477700"
+	},
+	"item": [
+		{
+			"name": "Get Patient by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/01536b50-8710-4350-893c-6043a9536404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"01536b50-8710-4350-893c-6043a9536404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient by ID 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/3c06edf1-7abc-4f38-9e39-97e50e0899e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"3c06edf1-7abc-4f38-9e39-97e50e0899e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Patients by Birth Date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/search?birthDate=eq1993-06-08T19:45:35Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"search"
+					],
+					"query": [
+						{
+							"key": "birthDate",
+							"value": "eq1993-06-08T19:45:35Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Patients by Birth Date greater",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/search?birthDate=ge1995-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"search"
+					],
+					"query": [
+						{
+							"key": "birthDate",
+							"value": "ge1995-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Patients by Birth Date less",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/search?birthDate=le2000-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"search"
+					],
+					"query": [
+						{
+							"key": "birthDate",
+							"value": "le2000-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Patients by Birth Date not in range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/search?birthDate=ne2000-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"search"
+					],
+					"query": [
+						{
+							"key": "birthDate",
+							"value": "ne2000-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Patients by Birth Date included",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/search?birthDate=eb2010-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"search"
+					],
+					"query": [
+						{
+							"key": "birthDate",
+							"value": "eb2010-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Period Search by Dates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/period-search?startDate=ge1990-01-01&endDate=le1995-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"period-search"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "ge1990-01-01"
+						},
+						{
+							"key": "endDate",
+							"value": "le1995-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": {\r\n    \"use\": \"official\",\r\n    \"family\": \"Agent\",\r\n    \"given\": [\r\n      \"James\",\r\n      \"Bond\"\r\n    ]\r\n  },\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"2001-09-22T09:00:00\",\r\n  \"active\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"3c06edf1-7abc-4f38-9e39-97e50e0899e0\",\r\n    \"name\": {\r\n        \"id\": \"312912af-e53c-4e2e-9bef-febeda12cc66\",\r\n        \"use\": \"official ***\",\r\n        \"family\": \"Agent !!!\",\r\n        \"given\": [\r\n            \"James ***\",\r\n            \"Bond ***\"\r\n        ]\r\n    },\r\n    \"gender\": \"male\",\r\n    \"birthDate\": \"2003-01-26T09:00:00\",\r\n    \"active\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient Wrong",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"49bdb9a6-baf1-4f43-be3e-0f048c5afcf8\",\r\n    \"name\": {\r\n        \"id\": \"c5c5506e-23b3-4a67-887a-8ed7ab702c64\",\r\n        \"use\": \"official ***\",\r\n        \"family\": \"Тепляков***\",\r\n        \"given\": [\r\n            \"Леонид***\",\r\n            \"Петрович***\"\r\n        ]\r\n    },\r\n    \"gender\": \"female\",\r\n    \"birthDate\": \"2023-01-26T09:00:00\",\r\n    \"active\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/3c06edf1-7abc-4f38-9e39-97e50e0899e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"3c06edf1-7abc-4f38-9e39-97e50e0899e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/patient/patients/delete-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"patient",
+						"patients",
+						"delete-all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
