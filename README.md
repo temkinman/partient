@@ -15,5 +15,7 @@ To get started with the Patient Management API, follow the instructions below to
 ### Running the Application
 
 1. **Clone the Repository**
+2. **Import postman collection**
+3. **Run docker-compose**
 
-   run: docker-compose up --build
+   docker-compose up --build
