@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  hospital.api:
+    build:
+      context: "E:\\PetProjects\\Patient\\PatientManagement"
+      dockerfile: "./Hospital.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/Hospital.Api.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "hospitalapi:dev"
+    ports: []
+    volumes:
+    - "E:\\PetProjects\\Patient\\PatientManagement\\Hospital.Api:/app:rw"
+    - "E:\\PetProjects\\Patient\\PatientManagement:/src:rw"
+    - "C:\\Users\\artem-ms\\AppData\\Roaming\\Microsoft\\UserSecrets:/root/.microsoft/usersecrets"
+    - "C:\\Users\\artem-ms\\.nuget\\packages:/root/.nuget/packages"
+    working_dir: "/app"

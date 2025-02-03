@@ -1,0 +1,25 @@
+services:
+  hospital.api:
+    image: ${DOCKER_REGISTRY-}hospitalapi
+    build:
+      context: .
+      dockerfile: ./Hospital.Api/Dockerfile
+    ports:
+      - "9090:80"
+    container_name: hospital_web_api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - patientDb
+  patientDb:
+    image: postgres:latest
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    container_name: db_hospital_container
+volumes:
+  db_data:

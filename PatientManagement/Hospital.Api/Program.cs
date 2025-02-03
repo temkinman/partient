@@ -35,10 +35,24 @@ builder.Services.AddValidatorsFromAssemblyContaining<GetCategoryByIdQueryValidat
 
 builder.Services.AddAutoMapper(typeof(PatientRequestProfile).Assembly);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseMiddleware<CustomExceptionHandlerMiddleware>();
+
+app.UseRouting();
+app.UseCors("AllowAllOrigins"); // Enable CORS
 
 if (app.Environment.IsDevelopment())
 {
@@ -57,6 +71,13 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseHsts();
 
-app.MapControllers();
+app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
+// app.MapControllers();
 
 app.Run();

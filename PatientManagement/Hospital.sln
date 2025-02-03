@@ -3,13 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Api", "Hospital.Api\Hospital.Api.csproj", "{374F1FB1-EF49-452C-A274-A944ABA8E02F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hospital.Api", "Hospital.Api\Hospital.Api.csproj", "{374F1FB1-EF49-452C-A274-A944ABA8E02F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Domain", "Hospital.Domain\Hospital.Domain.csproj", "{9FC90DC2-E0A2-4E31-A241-E69AA87E8CFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hospital.Domain", "Hospital.Domain\Hospital.Domain.csproj", "{9FC90DC2-E0A2-4E31-A241-E69AA87E8CFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Application", "Hospital.Application\Hospital.Application.csproj", "{69071F51-7874-4237-B3E9-E65478044050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hospital.Application", "Hospital.Application\Hospital.Application.csproj", "{69071F51-7874-4237-B3E9-E65478044050}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Infrastructure", "Hospital.Infrastructure\Hospital.Infrastructure.csproj", "{FD73F7A0-921F-4136-94AC-E6E5EDDCA6BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hospital.Infrastructure", "Hospital.Infrastructure\Hospital.Infrastructure.csproj", "{FD73F7A0-921F-4136-94AC-E6E5EDDCA6BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{359CA8EE-E057-4BE3-B0E5-2DC95EBD548F}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{9F2BDB74-8929-48FE-B3FB-B0A745A3E889}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hospital", "Hospital", "{7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +45,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{374F1FB1-EF49-452C-A274-A944ABA8E02F} = {7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9}
+		{9FC90DC2-E0A2-4E31-A241-E69AA87E8CFF} = {7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9}
+		{69071F51-7874-4237-B3E9-E65478044050} = {7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9}
+		{FD73F7A0-921F-4136-94AC-E6E5EDDCA6BB} = {7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9}
+		{9F2BDB74-8929-48FE-B3FB-B0A745A3E889} = {359CA8EE-E057-4BE3-B0E5-2DC95EBD548F}
+		{7A4E6C48-A72E-4F61-AE74-9BCA2186F9E9} = {9F2BDB74-8929-48FE-B3FB-B0A745A3E889}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D9F992E-441A-4977-8B21-BB9BC6D0A54C}
