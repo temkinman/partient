@@ -4,8 +4,6 @@ public class DateTimeHelper
 {
     public static DateTime GetDateTimeWithUtc(DateTime birthDate)
     {
-        //DateTime.TryParse(dateTime, null, System.Globalization.DateTimeStyles.RoundtripKind, out DateTime birthDate);
-
         switch (birthDate.Kind)
         {
             case DateTimeKind.Unspecified:

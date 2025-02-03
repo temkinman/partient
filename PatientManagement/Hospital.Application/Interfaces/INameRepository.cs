@@ -1,5 +1,4 @@
-﻿using System.Linq.Expressions;
-using Hospital.Domain.Entities;
+﻿using Hospital.Domain.Entities;
 
 namespace Hospital.Application.Interfaces;
 

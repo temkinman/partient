@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using FluentValidation;
 using Hospital.Application.Exceptions;
-using System.Net;
 
 namespace Hospital.Application.Middlewares;
 

@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using Hospital.Application.Exceptions;
 using Hospital.Application.Interfaces;
-using Hospital.Domain.Entities;
 using MediatR;
 
 namespace Hospital.Application.Patients.Commands.DeletePatient;

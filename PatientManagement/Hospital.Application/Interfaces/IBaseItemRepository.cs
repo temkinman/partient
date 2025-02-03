@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-namespace Hospital.Application.Interfaces;
+﻿namespace Hospital.Application.Interfaces;
 
 public interface IBaseItemRepository<T>
 {

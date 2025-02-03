@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Hospital.Application.Exceptions;
 using Hospital.Application.Interfaces;
 using Hospital.Domain.Entities;
 using MediatR;

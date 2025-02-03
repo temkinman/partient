@@ -8,7 +8,6 @@ using Hospital.Application.Patients.Commands.CreatePatient;
 using Hospital.Application.Patients.Queries.GetPatientById;
 using Hospital.Infrastructure;
 using Hospital.Infrastructure.Contexts;
-using Microsoft.AspNetCore.Http.Json;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
